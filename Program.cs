@@ -3,33 +3,39 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace SimpleCS
 {
-    public class Main
+    
+   
+
+    public class Shift
     {
-        static bool IsClockedIn { get; set; } = false;
+        public bool Overtime { get; set; }
 
-        public setClockStatus()
+        public static bool IsClockedIn { get; set; } = false;
+
+
+        public static void SetClockStatus()
         {
-            IsClockedIn == true ? IsClockedIn = false : IsClockedIn = true;
-            Console.WriteLine(IsClockedIn);
+                IsClockedIn = !IsClockedIn;
+                Console.WriteLine(IsClockedIn);            
         }
-
-
-
-        public class Shift
+        public static void ClockIn()
         {
-            public string Date { get; set; };
-
-            public bool Overtime { get; set; };
-
-            public ClockIn
-            {
-                public string StartTime = DateTime.Now.ToString();
-                IsClockedIn = true;
-            }
+            string startTime = DateTime.Now.ToString();
+            SetClockStatus();
+        }
             
-            public ClockOut()
-            {
-                IsClockedIn = false
-            }
+        public static void ClockOut()
+        {
+            SetClockStatus();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Shift shift = new Shift();
+            Shift.ClockIn();
+        }
     }
 }
