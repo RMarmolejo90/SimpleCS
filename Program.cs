@@ -9,13 +9,15 @@ namespace SimpleCS
 
         static void Main(string[] args)
         {
-            ConcatMessage("Hello I am very serious right now");
+            string message = "You know this is true...";
+            Console.WriteLine(ConcatMessage(message));
+            Console.ReadLine();
         }
 
-        private static void ConcatMessage(string message)
+        private static string ConcatMessage(string message)
         {
-            Console.WriteLine(message + " ..and this is for reals");
-            Console.ReadLine();
+            return message += " and this is also FOR REALS";
+                   
         }
 
     }
