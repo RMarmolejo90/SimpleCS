@@ -6,15 +6,16 @@ namespace SimpleCS
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            HelloWorld();
-            Console.ReadLine();
+            ConcatMessage("Hello I am very serious right now");
         }
 
-        private static void HelloWorld()
+        private static void ConcatMessage(string message)
         {
-            Console.WriteLine("Hello world");
+            Console.WriteLine(message + " ..and this is for reals");
+            Console.ReadLine();
         }
 
     }
