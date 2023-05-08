@@ -9,17 +9,12 @@ namespace SimpleCS
 
         static void Main(string[] args)
         {
-            string message = "You know this is true...";
-            Console.WriteLine(ConcatMessage(message));
+            Guid id = new Guid();
+            Person person = new Person("Phil", id);
+
+            Console.WriteLine(person);
             Console.ReadLine();
         }
-
-        private static string ConcatMessage(string message)
-        {
-            return message += " and this is also FOR REALS";
-                   
-        }
-
     }
 
 
