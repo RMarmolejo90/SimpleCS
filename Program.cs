@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Specialized;
-using System.Security.Cryptography.X509Certificates;
 
 namespace SimpleCS
 {
@@ -9,24 +9,20 @@ namespace SimpleCS
 
         static void Main(string[] args)
         {
-            Car myCar = new Car("GMC", "Canyon", 1993, "Silver");
+            Car car1 = new Car("Geo", "Prism");
 
-            Console.WriteLine("{0} {1} {2} {3} {4}",
-                myCar.Make,
-                myCar.Model,
-                myCar.Year,
-                myCar.Color,
-                myCar.GetCarValue());
+            Car car2 = new Car("Dodge", "Challenger");
 
-            Car jeep = new Car("Jeep");
-            Car vehicle = new Car();
-            Console.WriteLine(jeep.Make);
-            Console.WriteLine(vehicle.Make);
-            Console.ReadLine();
+            List<Car> myList = new List<Car>();
+            myList.Add(car1);
+            myList.Add(car2);   
+
+            foreach (Car car in myList ) { Console.WriteLine(car.Model); }
 
             Console.ReadLine();
 
         }
+
     }
 
 

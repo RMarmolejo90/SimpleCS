@@ -33,9 +33,10 @@ namespace SimpleCS
         {
             Make = String.Empty;
         }
-        public Car(string make)
+        public Car(string make, string model)
         {
             Make = make;
+            Model = model;
         }
         public Car(string make, string model, int year, string color)
         {
