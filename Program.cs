@@ -9,10 +9,17 @@ namespace SimpleCS
 
         static void Main(string[] args)
         {
-            Person person = new Person("Bobert", 9889391);
+            Car myCar = new Car("GMC", "Canyon", 1993, "Silver");
 
-            Console.WriteLine(person.Date);
+            Console.WriteLine("{0} {1} {2} {3} {4}",
+                myCar.Make,
+                myCar.Model,
+                myCar.Year,
+                myCar.Color,
+                myCar.GetCarValue());
+
             Console.ReadLine();
+
         }
     }
 
