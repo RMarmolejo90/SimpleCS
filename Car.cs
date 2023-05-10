@@ -29,6 +29,14 @@ namespace SimpleCS
             
         }
 
+        public Car()
+        {
+            Make = String.Empty;
+        }
+        public Car(string make)
+        {
+            Make = make;
+        }
         public Car(string make, string model, int year, string color)
         {
             Make = make;
