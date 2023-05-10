@@ -9,10 +9,9 @@ namespace SimpleCS
 
         static void Main(string[] args)
         {
-            Guid id = new Guid();
-            Person person = new Person("Phil", id);
+            Person person = new Person("Bobert", 9889391);
 
-            Console.WriteLine(person);
+            Console.WriteLine(person.Date);
             Console.ReadLine();
         }
     }
